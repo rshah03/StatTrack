@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './App.css'
+import './Styles/App.css'
 import Player from './Components/Player'
 import uuid from 'uuid'
 
