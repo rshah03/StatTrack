@@ -1,10 +1,21 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+import PlayerItem from './PlayerItem'
 
 class Player extends Component {
 	render() {
+		let playerItem
+		if(this.props.players) {
+			playerItem = this.props.players.map(player => {
+				return (
+					<PlayerItem key={player.name} player={player} />
+				)
+			})
+		}
 		return (
-			<p>Player</p>
+			<div>
+				{playerItem}
+			</div>
 		)
 	}
 }
