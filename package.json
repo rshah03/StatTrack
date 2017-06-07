@@ -6,7 +6,8 @@
     "bootstrap3": "^3.3.5",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "uuid": "^3.0.1"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
