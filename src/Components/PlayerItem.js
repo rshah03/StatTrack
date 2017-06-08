@@ -6,13 +6,30 @@ class PlayerItem extends Component {
 	render() {
 		return (
 			<div className='Player'>
-				<strong>Name:</strong> {this.props.player.name} <br/>
-				<ul>
-					<strong>INT:</strong> {this.props.player.INT} <br/>
-					<strong>STR:</strong> {this.props.player.STR} <br/>
-					<strong>DEX:</strong> {this.props.player.DEX} <br/>
-					<strong>LUK:</strong> {this.props.player.LUK} <br/>
-				</ul>
+				<table>
+					<tbody>
+						<tr>
+							<td><strong>Name </strong></td>
+							<td>:{this.props.player.name}</td>
+						</tr>
+						<tr>
+							<td><strong>INT </strong></td>
+							<td>:{this.props.player.INT}</td>
+						</tr>
+						<tr>
+							<td><strong>STR </strong></td>
+							<td>:{this.props.player.STR}</td>
+						</tr>
+						<tr>
+							<td><strong>DEX </strong></td>
+							<td>:{this.props.player.DEX}</td>
+						</tr>
+						<tr>
+							<td><strong>LUK</strong></td>
+							<td>:{this.props.player.LUK}</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		)
 	}
