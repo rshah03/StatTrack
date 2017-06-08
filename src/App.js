@@ -29,11 +29,18 @@ class App extends Component {
 		this.getInitialPlayers()
 	}
 
+	handleAddPlayer(player) {
+		let players = this.state.players
+		players.push(player)
+		this.setState({players:players})
+
+	}
+
 	render() {
 		return (
 			<div className="App">
 				<h3 id='hello'>Hello</h3>
-				<AddPlayer />
+				<AddPlayer addPlayer={this.handleAddPlayer.bind(this)}/>
 				<Player players={this.state.players} />
 			</div>			
 		)
