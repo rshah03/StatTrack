@@ -1,6 +1,9 @@
 .Player {
-	margin-right: 100em;
-	border: 1px dashed blue;
+	font-size: 20px;
+	padding: 10px;
+	margin: 10px;	
+	border: 1px solid blue;
+	display: inline-block;
 }
 
 strong {

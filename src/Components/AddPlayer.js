@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import uuid from 'uuid'
 import PropTypes from 'prop-types'
+import '../Styles/AddPlayer.css'
 
 class AddPlayer extends Component {
 	constructor() {
@@ -42,7 +43,7 @@ class AddPlayer extends Component {
 	render() {
 		return (
 			<div className='addPlayer'>
-				<h3>Add Player</h3>
+			<h3>ADD PLAYER</h3>
 				<form onSubmit={this.handleSubmit.bind(this)}>
 					<div>
 						<table>
@@ -72,7 +73,6 @@ class AddPlayer extends Component {
 					</div>
 					<input type='submit' value='submit' />
 				</form>
-				<hr />
 			</div>
 		)
 	}
