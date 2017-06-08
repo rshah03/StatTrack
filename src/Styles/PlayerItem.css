@@ -6,6 +6,6 @@
 	display: inline-block;
 }
 
-strong {
+td > strong {
 	color: red;
 }
