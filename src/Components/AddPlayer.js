@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import uuid from 'uuid'
+import PropTypes from 'prop-types'
 
 class AddPlayer extends Component {
 	constructor() {
@@ -17,9 +18,25 @@ class AddPlayer extends Component {
 	}
 	
 	handleSubmit(e) {
-		console.log('Event handler invoked')
-		e.preventDefault();
-		
+		if(this.refs.name.value === '' 
+		|| this.refs.int.value === ''
+		|| this.refs.str.value === ''
+		|| this.refs.dex.value === ''
+		|| this.refs.luk.value === '')
+			alert("One or more field(s) is/are blank.")
+		else {
+			this.setState({newPlayer: {
+				id: uuid.v4(),
+				name: this.refs.name.value,
+				INT: this.refs.int.value,
+				STR: this.refs.str.value,
+				DEX: this.refs.dex.value,
+				LUK: this.refs.luk.value
+			}}, function() {
+				this.props.addPlayer(this.state.newPlayer)
+			})
+		}
+		e.preventDefault();		
 	}
 
 	render() {
@@ -59,6 +76,10 @@ class AddPlayer extends Component {
 			</div>
 		)
 	}
+}
+
+AddPlayer.propTypes = {
+	addPlayer: PropTypes.func
 }
 
 export default AddPlayer
