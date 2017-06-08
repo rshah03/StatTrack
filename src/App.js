@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Styles/App.css'
 import Player from './Components/Player'
+import AddPlayer from './Components/AddPlayer'
 import uuid from 'uuid'
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
 		return (
 			<div className="App">
 				<h3 id='hello'>Hello</h3>
+				<AddPlayer />
 				<Player players={this.state.players} />
 			</div>			
 		)
