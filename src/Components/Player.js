@@ -20,6 +20,10 @@ class Player extends Component {
 	}
 }
 
+Player.propTypes = {
+	players: PropTypes.array
+}
+
 export default Player
 
 

@@ -10,23 +10,23 @@ class PlayerItem extends Component {
 					<tbody>
 						<tr>
 							<td><strong>Name </strong></td>
-							<td>:{this.props.player.name}</td>
+							<td>: {this.props.player.name}</td>
 						</tr>
 						<tr>
 							<td><strong>INT </strong></td>
-							<td>:{this.props.player.INT}</td>
+							<td>: {this.props.player.INT}</td>
 						</tr>
 						<tr>
 							<td><strong>STR </strong></td>
-							<td>:{this.props.player.STR}</td>
+							<td>: {this.props.player.STR}</td>
 						</tr>
 						<tr>
 							<td><strong>DEX </strong></td>
-							<td>:{this.props.player.DEX}</td>
+							<td>: {this.props.player.DEX}</td>
 						</tr>
 						<tr>
 							<td><strong>LUK</strong></td>
-							<td>:{this.props.player.LUK}</td>
+							<td>: {this.props.player.LUK}</td>
 						</tr>
 					</tbody>
 				</table>
