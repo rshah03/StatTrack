@@ -2,7 +2,15 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import '../Styles/PlayerItem.css'
 
+let count = 0
+
 class PlayerItem extends Component {
+	handleIntIncrease() {
+		console.log(this.props.player.INT)
+		var increasedINT = this.state.player.INT + 1
+		this.setState({INT: increasedINT})
+	}
+
 	render() {
 		return (
 			<div className='Player'>
@@ -15,6 +23,7 @@ class PlayerItem extends Component {
 						<tr>
 							<td><strong>INT </strong></td>
 							<td>: {this.props.player.INT}</td>
+							<td><button onClick={() => this.handleIntIncrease()}>+</button></td>
 						</tr>
 						<tr>
 							<td><strong>STR </strong></td>
