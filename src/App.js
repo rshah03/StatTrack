@@ -18,13 +18,23 @@ class App extends Component {
 
 	}
 
+	handleIncrementInt() {
+		console.log('method in app')
+		this.setState({
+			player: {
+				...this.state.player,
+				INT: this.state.players.props.player.INT + 1
+			}
+		})
+	}
+
 	render() {
 		return (
 			<div className="App">
 				<div className='addPlayer-form'>
 					<AddPlayer addPlayer={this.handleAddPlayer.bind(this)}/>
 				</div>
-				<Player players={this.state.players} />
+				<Player players={this.state.players} incrementInt={this.handleIncrementInt.bind(this)} />
 			</div>			
 		)
 	}

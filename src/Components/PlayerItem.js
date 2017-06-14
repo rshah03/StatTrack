@@ -16,7 +16,7 @@ class PlayerItem extends Component {
 						<tr>
 							<td><strong>INT </strong></td>
 							<td>: {this.props.player.INT}</td>
-							<td><button onClick={this.props.increasedINT}>+</button></td>
+							<td><button onClick={this.props.incrementINT}>+</button></td>
 						</tr>
 						<tr>
 							<td><strong>STR </strong></td>
