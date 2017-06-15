@@ -4,7 +4,7 @@ import Player from './Components/Player'
 import AddPlayer from './Components/AddPlayer'
 
 class App extends Component {
-	constructor() {
+	constructor(props) {
 		super()
 		this.state = {
 			players: [],
@@ -21,12 +21,11 @@ class App extends Component {
 	}
 
 	handleIncrementInt(player) {
-		// console.log('TEST')
 		console.log(player)
 		this.setState({
 			player: {
-				...this.state.player,
-				INT: 10
+				// ...this.state.player,
+				INT: player.INT + 1
 			}
 		})
 	}

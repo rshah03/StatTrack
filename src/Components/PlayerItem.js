@@ -8,7 +8,7 @@ class PlayerItem extends Component {
 	handleIncrease(e) {
 		this.setState({
 			player: {
-				INT: 10
+				INT: this.props.player.INT
 			}
 		}, function() {
 			this.props.incrementINT(this.props.player)

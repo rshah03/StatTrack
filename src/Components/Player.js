@@ -4,17 +4,7 @@ import PlayerItem from './PlayerItem'
 
 class Player extends Component {
 
-	// incrementINT = () => {
-	// 	console.log('button click')
-  //   this.setState({
-	// 		player: {
-	// 			...this.state.player,
-	// 			INT: this.state.player.INT + 1
-	// 		}
-	// 	})
-  // }
-
-	render() {
+	render() {	
 		let playerItem
 		if(this.props.players) {
 			playerItem = this.props.players.map(player => {
