@@ -8,8 +8,10 @@ class App extends Component {
 		super()
 		this.state = {
 			players: [],
+			player: {}
 		}
 	}
+
 
 	handleAddPlayer(player) {
 		let players = this.state.players
@@ -18,15 +20,24 @@ class App extends Component {
 
 	}
 
-	handleIncrementInt() {
-		console.log('method in app')
+	handleIncrementInt(player) {
+		// console.log('TEST')
+		console.log(player)
 		this.setState({
 			player: {
 				...this.state.player,
-				INT: this.state.players.props.player.INT + 1
+				INT: 10
 			}
 		})
 	}
+
+	updatePlayer(index, player) {
+		this.state.players.find(this.state.player.name)
+		this.setState({
+			INT: this.state.player.INT + 1
+		})
+	}
+
 
 	render() {
 		return (

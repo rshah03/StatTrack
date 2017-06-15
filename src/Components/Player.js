@@ -19,7 +19,9 @@ class Player extends Component {
 		if(this.props.players) {
 			playerItem = this.props.players.map(player => {
 				return (
-					<PlayerItem key={player.name} player={player} incrementINT={this.props.incrementInt.bind(this)} />
+					<PlayerItem 
+						key={player.name} player={player} 
+						incrementINT={this.props.incrementInt.bind(this)} />
 				)
 			})
 		}

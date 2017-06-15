@@ -4,6 +4,19 @@ import '../Styles/PlayerItem.css'
 
 
 class PlayerItem extends Component {
+
+	handleIncrease(e) {
+		this.setState({
+			player: {
+				INT: 10
+			}
+		}, function() {
+			this.props.incrementINT(this.props.player)
+		})
+		e.preventDefault()
+		// <td><button onClick={this.props.incrementINT}>+</button></td> ON LINE 30
+	}
+
 	render() {
 		return (
 			<div className='Player'>
@@ -16,7 +29,7 @@ class PlayerItem extends Component {
 						<tr>
 							<td><strong>INT </strong></td>
 							<td>: {this.props.player.INT}</td>
-							<td><button onClick={this.props.incrementINT}>+</button></td>
+							<td><button onClick={this.handleIncrease.bind(this)}>+</button></td>
 						</tr>
 						<tr>
 							<td><strong>STR </strong></td>
